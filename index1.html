@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignador de Zonas de Bilbao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .upload-container {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:disabled {
+            background-color: #cccccc;
+        }
+        #results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Asignador de Zonas de Bilbao</h1>
+    
+    <div class="upload-container">
+        <p>Selecciona tu archivo Excel (.xlsx) con las calles:</p>
+        <input type="file" id="fileInput" accept=".xlsx, .xls" />
+        <button id="processBtn" disabled>Procesar Archivo</button>
+        <button id="downloadBtn" disabled>Descargar Resultado</button>
+    </div>
+    
+    <div id="results"></div>
+
+    <!-- SheetJS (xlsx) para manejar Excel -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+    
+    <script>
+        // Diccionario completo de zonas (ejemplo)
+        const zonasEstandar = {
+                     //DEUSTO
+  "ANDALUCÍA": "Deusto",
+  "ARAGÓN": "Deusto",
+  "ASTURIAS": "Deusto",
+  "AV LEHENDAKARI AGUIRRE": "Deusto o San Ignacio *Verficacion pdnt*",
+  "AV MADARIAGA": "Deusto",
+  "AV RAMÓN Y CAJAL": "Deusto",
+  "BADAJOZ": "Deusto",
+  "BENITA ASAS": "Deusto",
+  "BLAS DE OTERO": "Deusto",
+  "BURGOS": "Deusto",
+  "CACERES": "Deusto",
+  "CANTABRIA": "Deusto",
+  "EGUZKILORE": "Deusto",
+  "ENEKURI": "Deusto",
+  "EXTREMADURA": "Deusto",
+  "FRANCESC MACIA": "Deusto",
+  "GALICIA": "Deusto",
+  "GREGORIO BALPARDA": "Deusto",
+  "HELIODORO DE LA TORRE": "Deusto",
+  "IBAREKOLANDA": "Deusto",
+  "ITURRIKOETXE": "Deusto",
+  "JON ARROSPIDE": "Deusto",
+  "JUAN DE URBIETA": "Deusto",
+  "JULIO LAZURTEGUI": "Deusto",
+  "JULIO URQUIJO": "Deusto",
+  "LA RIOJA": "Deusto",
+  "LAGUNETXEA": "Deusto",
+  "LOGROÑO": "Deusto",
+  "LUIS POWER": "Deusto",
+  "LUZARRA": "Deusto",
+  "MATXINTXU": "Deusto",
+  "CA MORGAN": "Deusto",
+  "NAVARRA": "Deusto",
+  "PL PLACIDO CAREAGA": "Deusto",
+  "RAFAELA YBARRA": "Deusto",
+  "RIBERA DE BOTICA VIEJA": "Deusto",
+  "SAGRADA FAMILIA": "Deusto",
+  "PL SAN PEDRO": "Deusto",
+  "PL SAN PIO X": "Deusto",
+  
+/*-- #   RI DEUSTO
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",
+#  "": "Deusto Muelle",*/
+ 
+/* DEUSTO MONTE
+
+"GORBEIA": "Deusto Monte",
+ "": "Deusto Monte",
+ "": "Deusto Monte",
+ "": "Deusto Monte",
+ "": "Deusto Monte",
+ "": "Deusto Monte",
+ "": "Deusto Monte",
+ "": "Deusto Monte",
+ "": "Deusto Monte", */
+
+//  SAN IGNACIO
+
+  "ANDALUCIA": "San Ignacio",
+  "ARTURO CAMPION": "San Ignacio",
+  "AV LEHENDAKARI AGUIRRE": "San Ignacio",
+  "AV TXOMIN GARAT": "San Ignacio",
+  "AV ZUMALAKARREGI": "San Ignacio",
+  "BENIDORM": "San Ignacio",
+  "ELORRIETA": "San Ignacio",
+  "ETXENAGUSIA": "San Ignacio",
+  "ERDIKOETXE":"San Ignacio",
+  "ISLAS CANARIAS": "San Ignacio",
+  "NAVARRO VILLOSLADA": "San Ignacio",
+  "ORIXE": "San Ignacio",
+  "PL LEVANTE": "San Ignacio",
+  "PL AITA PATXI": "San Ignacio",
+  "PL CELESTINO MARIA D": "San Ignacio",
+  "PINTOR ETXENAGUSIA": "San Ignacio",
+  "SAN IGNACIO AUZOA": "San Ignacio",
+  "CATALUNYA":"San Ignacio",
+  "LARRAKOTORRE":"San Ignacio",
+  "RI ELORRIETA":"San Ignacio",
+  
+  
+  
+//  MATIKO 
+
+
+//  BILBAO CENTRO
+
+"AL GREGORIO DE LA RE 012  004 IZ":"Bilbao Centro",
+"AL URQUIJO 018": "Bilbao Centro",
+"ARANE": "Bilbao Centro",
+"AUTONOMIA": "Bilbao Centro",
+"AV LAPURDI": "Bilbao Centro",
+"AV SABINO ARANA ": "Bilbao Centro",
+"BERASTEGUI": "Bilbao Centro",
+"BERTENDONA": "Bilbao Centro",
+"ESTACION DE BASURTU": "Bilbao Centro",
+"GENERAL CONCHA": "Bilbao Centro",
+"GURTUBAY": "Bilbao Centro",
+"HEROS": "Bilbao Centro",
+"HURTADO DE AMEZAGA": "Bilbao Centro",
+"IBAÑEZ DE BILBAO": "Bilbao Centro",
+"IPARRAGUIRRE": "Bilbao Centro",
+"IRALA": "Bilbao Centro",
+"JUAN AJURIAGUERRA": "Bilbao Centro",
+"LICENCIADO POZA": "Bilbao Centro",
+"LUIS BRIÑAS": "Bilbao Centro",
+"LUTXANA": "Bilbao Centro",
+"MEDINA DE POMAR": "Bilbao Centro",
+"OLITE": "Bilbao Centro",
+"PL GENERAL LATORRE": "Bilbao Centro",
+"RODRIGUEZ ARIAS": "Bilbao Centro",
+"URIZAR": "Bilbao Centro",
+"ZANKOETA": "Bilbao Centro",
+"HURTADO DE AMEZAGA": "Bilbao Centro",
+"CARDENAL GARDOQUI": "Bilbao Centro",
+/*"": "Bilbao Centro",
+ "": "Bilbao Centro",
+ "": "Bilbao Centro",
+ "": "Bilbao Centro",
+ "": "Bilbao Centro",
+ "": "Bilbao Centro",*/
+
+
+// BILBAO_BASURTU
+
+// "":"",
+
+// KASKO VIEJO
+
+  "ANDRA MARI": "Kasko Viejo",
+  "ARTEKALE": "Kasko Viejo",
+  "PL UNAMUNO": "Kasko Viejo",
+  "BARRENKALE": "Kasko Viejo",
+  "BARRANKALE BARRENA": "Kasko Viejo",
+  "BELOSTIKALE": "Kasko Viejo",
+  "CARNICERIA VIEJA": "Kasko Viejo",
+  "CORREO": "Kasko Viejo",
+  "CORREOS": "Kasko Viejo",
+  "LA RIBERA": "Kasko Viejo",
+  "MERCED": "Kasko Viejo",
+  "PL ARRIAGA": "Kasko Viejo",
+  "PL MIGUEL DE UNAMUNO": "Kasko Viejo",
+  "PL NUEVA": "Kasko Viejo",
+  "PL SANTIAGO": "Kasko Viejo",
+  "PL SANTOS JUANES": "Kasko Viejo",
+  "RIBERA": "Kasko Viejo",
+  "RIBERA VIEJA": "Kasko Viejo",
+  "SOMERA": "Kasko Viejo",
+  "TENDERIA": "Kasko Viejo",
+  
+//   SANTUTXU
+
+"ITURRIBIDE": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+// "": "Santutxu",
+
+// SANFRA
+
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+// "": "SanFra",
+
+
+
+/*# MIRIBILLA
+
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+# "": "Miribilla",
+
+
+
+# ZORROZA
+
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Zorroza",
+# "": "Rekalde",
+
+
+
+
+# REKALDE
+
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",
+# "": "Rekalde",*/
+        };
+
+        // Variables globales
+        let processedData = [];
+        const processBtn = document.getElementById('processBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const fileInput = document.getElementById('fileInput');
+        const resultsDiv = document.getElementById('results');
+
+        // Habilitar botón cuando se selecciona un archivo
+        fileInput.addEventListener('change', (e) => {
+            processBtn.disabled = !e.target.files.length;
+        });
+
+        // Función para asignar zona
+        function asignarZona(calle) {
+            if (!calle) return "";
+            
+            const calleUpper = calle.toString().toUpperCase().trim();
+            
+            // 1. Búsqueda exacta
+            for (const [clave, zona] of Object.entries(zonasEstandar)) {
+                if (calleUpper.includes(clave)) {
+                    return zona;
+                }
+            }
+            
+            return "";
+        }
+
+        // Procesar el archivo Excel
+        processBtn.addEventListener('click', async () => {
+            const file = fileInput.files[0];
+            if (!file) return;
+            
+            try {
+                // Leer el archivo Excel
+                const data = await file.arrayBuffer();
+                const workbook = XLSX.read(data);
+                const firstSheetName = workbook.SheetNames[0];
+                const worksheet = workbook.Sheets[firstSheetName];
+                
+                // Convertir a JSON
+                const jsonData = XLSX.utils.sheet_to_json(worksheet);
+                
+                // Asignar zonas
+                processedData = jsonData.map(row => ({
+                    ...row,
+                    Zona: asignarZona(row.Calle)
+                }));
+                
+                // Mostrar estadísticas
+                const totalCalles = processedData.length;
+                const callesEncontradas = processedData.filter(row => row.Zona !== "").length;
+                
+                resultsDiv.innerHTML = `
+                    <h3>Resultados del procesamiento:</h3>
+                    <p>Total de calles procesadas: ${totalCalles}</p>
+                    <p>Calles con zona asignada: ${callesEncontradas}</p>
+                    <p>Calles no identificadas: ${totalCalles - callesEncontradas}</p>
+                `;
+                
+                // Habilitar botón de descarga
+                downloadBtn.disabled = false;
+                
+            } catch (error) {
+                resultsDiv.innerHTML = `<p style="color: red;">Error al procesar el archivo: ${error.message}</p>`;
+            }
+        });
+
+        // Descargar el resultado como Excel
+        downloadBtn.addEventListener('click', () => {
+            if (processedData.length === 0) return;
+            
+            try {
+                // Crear nueva hoja de cálculo
+                const newWorksheet = XLSX.utils.json_to_sheet(processedData);
+                
+                // Crear nuevo libro de Excel
+                const newWorkbook = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(newWorkbook, newWorksheet, "Calles con Zonas");
+                
+                // Descargar el archivo
+                XLSX.writeFile(newWorkbook, "calles_con_zonas.xlsx");
+                
+                resultsDiv.innerHTML += `<p style="color: green;">Archivo descargado con éxito!</p>`;
+            } catch (error) {
+                resultsDiv.innerHTML += `<p style="color: red;">Error al generar el archivo: ${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>
