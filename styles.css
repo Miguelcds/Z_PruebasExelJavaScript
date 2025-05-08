@@ -11,14 +11,15 @@ body {
     position: relative;
 
     color: aliceblue;
-    background: url("bilbo.jpg") no-repeat center center;
+    background: url("bilbo.jpg") center center;
     background-size: cover;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
 }
 
 body::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
