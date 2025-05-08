@@ -43,7 +43,7 @@ body::before {
 }
 
 h1 {
-    padding-top: 100px;
+    padding-top: 40px;
     text-align: center;
     font-size: 40px;
 }
@@ -87,7 +87,7 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 1.5em;
-        padding-top: 50px;
+        padding-top: 0px;
     }
 
     .upload-container {
