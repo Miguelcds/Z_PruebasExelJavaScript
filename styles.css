@@ -86,9 +86,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+
     h1 {
         font-size: 1.5em;
-        padding-top: 0px;
+        padding-top: 80px;
     }
 
     .upload-container {
