@@ -14,16 +14,25 @@
     
 </head>
 <body>
-    <h1>Asignador de Zonas de Bilbao</h1>
-    
-    <div class="upload-container">
-        <p>Selecciona tu archivo Excel (.xlsx) con las calles:</p>
-        <input type="file" id="fileInput" accept=".xlsx, .xls" />
-        <button id="processBtn" disabled>Procesar Archivo</button>
-        <button id="downloadBtn" disabled>Descargar Resultado</button>
+    <div class="container">
+        <div class="main-content">
+            <h1>Asignador de Zonas de Bilbao</h1>
+
+            <div class="upload-container">
+                <p>Selecciona tu archivo Excel (.xlsx) con las calles:</p>
+                <input type="file" id="fileInput" accept=".xlsx, .xls" />
+                <br>
+                <button id="processBtn" disabled>Procesar Archivo</button>
+                <button id="downloadBtn" disabled>Descargar Resultado</button>
+            </div>
+
+            <div id="results"></div>
+        </div>
     </div>
-    
-    <div id="results"></div>
+
+    <footer>
+        Todos los derechos reservados 2025
+    </footer>
 
     <!-- Registrar el Service Worker -->
     <script>
