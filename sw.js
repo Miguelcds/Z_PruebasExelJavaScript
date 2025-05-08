@@ -1,24 +1,29 @@
 self.addEventListener('install', (event) => {
-    console.log('Service Worker instalado');
     event.waitUntil(
-      caches.open('app-cache').then((cache) => {
-        return cache.addAll([
-          './index.html',
-          './manifest.json',
-          './bilbo.jpg',
-          './icono192x192.png',
-          './icono512x512.png',
-          './styles.css', // Si tienes un archivo CSS
-          './script.js'   // Si tienes un archivo JS
-        ]);
-      })
+        caches.open('app-cache-v2').then((cache) => { // Cambiar nombre siempre que actualice la app
+            return cache.addAll([
+                './index.html',
+                './styles.css',
+                './script.js',
+                './manifest.json',
+                './icono192x192.png',
+                './icono512x512.png'
+            ]);
+        })
     );
-  });
-  
-  self.addEventListener('fetch', (event) => {
-    event.respondWith(
-      caches.match(event.request).then((response) => {
-        return response || fetch(event.request);
-      })
+});
+
+self.addEventListener('activate', (event) => {
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cache) => {
+                    if (cache !== 'app-cache-v2') {
+                        return caches.delete(cache);
+                    }
+                })
+            );
+        })
     );
-  });
+});
+
