@@ -160,7 +160,15 @@ const zonasEstandar = {
         "FONTECHA Y SALAZAR":"Matiko",
         "CA MOLINO DE VIENTO":"Matiko",
         "CALIXTO LEGUINA": "Matiko",
+        "PINTOR EDUARDO ZAMAC":"Matiko",
         //"":"Matiko",
+        //"":"Matiko",
+        //"":"Matiko",
+        //"":"Matiko",
+        //"":"Matiko",
+        //"":"Matiko",
+        //"":"Matiko",
+
 
         // MATIKO ALTO
 
