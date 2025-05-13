@@ -526,7 +526,7 @@ const zonasEstandar = {
         "CONDE MIRASOL":"San Francisco",
         "DOS DE MAYO":"San Francisco",
         "MARTZANA":"San Francisco",
-        "CANTALOJAS": "SanFra",
+        "CANTALOJAS": "San Francisco",
         //"": "SanFra",
 
         //MIRIBILLA
