@@ -320,8 +320,8 @@ const zonasEstandar = {
         "ARBOLANTXA": "Bilbao Centro",
         "PL JARO DE ARANA": "Bilbao Centro",
         "GARCIA SALAZAR": "Bilbao Centro",
-        //"": "Bilbao Centro",
-        //"": "Bilbao Centro",
+        "ERREKAKOETXE": "Bilbao Centro",
+        "JARDINTXIKERRA": "Bilbao Centro",
         //"": "Bilbao Centro",
         //"": "Bilbao Centro",
 
@@ -337,7 +337,7 @@ const zonasEstandar = {
         "BENTAZARRA":"Bilbao-Basurtu",
         "ES ENTRAMBASAGUAS ":"Bilbao-Basurtu",
         "PL BASURTUGORTA":"Bilbao-Basurtu",
-        //"":"Bilbao-Basurtu",
+        "AV MONTEVIDEO-BASURT":"Bilbao-Basurtu",
         //"":"Bilbao-Basurtu",
         //"":"Bilbao-Basurtu",
         //"":"Bilbao-Basurtu",
@@ -505,12 +505,12 @@ const zonasEstandar = {
 
         // SANFRA
 
-        "SAN FRANCISCO": "SanFra",
-        "HERNANI": "SanFra",
-        "BILBAO LA VIEJA": "SanFra",
-        "BRUNO MAURICIO ZABAL": "SanFra",
-        "BAILEN": "SanFra",
-        "ARECHAGA": "SanFra",
+        "SAN FRANCISCO": "San Francisco",
+        "HERNANI": "San Francisco",
+        "BILBAO LA VIEJA": "San Francisco",
+        "BRUNO MAURICIO ZABAL": "San Francisco",
+        "BAILEN": "San Francisco",
+        "ARECHAGA": "San Francisco",
         "CANTARRANAS":"San Francisco",
         "CONCEPCION":"San Francisco",
         "CORTES":"San Francisco",
@@ -526,7 +526,7 @@ const zonasEstandar = {
         "CONDE MIRASOL":"San Francisco",
         "DOS DE MAYO":"San Francisco",
         "MARTZANA":"San Francisco",
-        //"": "SanFra",
+        "CANTALOJAS": "SanFra",
         //"": "SanFra",
 
         //MIRIBILLA
