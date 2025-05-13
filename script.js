@@ -185,6 +185,7 @@ const zonasEstandar = {
         "ZUMAIA":"Matiko Alto",
         "ZURBARAN":"Matiko Alto",
         "MONTE ALDAMIZ":"Matiko Alto",
+        "GR NUEVA AURORA":"Matiko Alto",
         //"":"Matiko Alto",
 
         //  BILBAO CENTRO
