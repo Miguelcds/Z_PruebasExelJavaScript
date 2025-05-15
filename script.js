@@ -161,7 +161,7 @@ const zonasEstandar = {
         "CA MOLINO DE VIENTO":"Matiko",
         "CALIXTO LEGUINA": "Matiko",
         "PINTOR EDUARDO ZAMAC":"Matiko",
-        //"":"Matiko",
+        "MONTE OIZ":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
@@ -396,7 +396,7 @@ const zonasEstandar = {
         "PL MIGUEL UNAMUNO":"Kasko Viejo",
         "ATXURI":"Kasko Viejo",
         "MARIA MUÑOZ":"Kasko Viejo",
-        //"":"Kasko Viejo",
+        "BANCO ESPAÑA":"Kasko Viejo",
         //"":"Kasko Viejo",
         //"":"Kasko Viejo",
      
@@ -648,7 +648,7 @@ const zonasEstandar = {
         "TOLOSA":"Rekalde",
         "TR ALTUBE":"Rekalde",
         "GR ARTAZUBEKOA":"Rekalde",
-        //"": "Rekalde",
+        "BIZKARGI": "Rekalde",
 
         // TXURDINAGA:
 
