@@ -397,7 +397,7 @@ const zonasEstandar = {
         "ATXURI":"Kasko Viejo",
         "MARIA MUÑOZ":"Kasko Viejo",
         "BANCO ESPAÑA":"Kasko Viejo",
-        //"":"Kasko Viejo",
+        "SOMBRERERIA":"Kasko Viejo",
         //"":"Kasko Viejo",
      
      
@@ -602,7 +602,7 @@ const zonasEstandar = {
         "BA SARRIKUE":"Zurbaranbarri",
         "PL ITURRIONDO":"Zurbaranbarri",
         "GR ARABELLA":"Zurbaranbarri",
-        //"":"Zurbaranbarri",
+        "GR REMAR":"Zurbaranbarri",
         //"":"Zurbaranbarri",
 
         // REKALDE
