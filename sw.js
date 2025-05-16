@@ -1,6 +1,6 @@
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open('app-cache-v5.7').then((cache) => { // Cambiar nombre siempre que actualice la app para que la funcion del script se ejecute
+        caches.open('app-cache-v5.8').then((cache) => { // Cambiar nombre siempre que actualice la app para que la funcion del script se ejecute
             return cache.addAll([
                 './index.html',
                 './styles.css',
