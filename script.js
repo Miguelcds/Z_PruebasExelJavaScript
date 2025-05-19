@@ -398,6 +398,7 @@ const zonasEstandar = {
         "MARIA MUÑOZ":"Kasko Viejo",
         "BANCO ESPAÑA":"Kasko Viejo",
         "SOMBRERERIA":"Kasko Viejo",
+        "LOTERIA":"Kasko Viejo",
         //"":"Kasko Viejo",
      
      
@@ -501,6 +502,7 @@ const zonasEstandar = {
         "MARIA AGUIRRE AGUIRR":"Santutxu Alto",
         "PL JUAN XXIII":"Santutxu Alto",
         "VIRGEN DE BEGOÑA":"Santutxu Alto",
+        "CA ATXETA BIDEA":"Santutxu Alto",
         //"":"Santutxu Alto",
 
         // SANFRA
@@ -553,6 +555,7 @@ const zonasEstandar = {
         "TENOR CONSTANTINO":"Miribilla",
         "MINA JULIA":"Miribilla",
         "SAN ADRIAN": "Miribilla",
+        "MONTE SAIBIGAIN":"Miribilla",
         //"": "Miribilla",
 
         // ZAMAKOLA
