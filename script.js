@@ -322,7 +322,7 @@ const zonasEstandar = {
         "GARCIA SALAZAR": "Bilbao Centro",
         "ERREKAKOETXE": "Bilbao Centro",
         "JARDINTXIKERRA": "Bilbao Centro",
-        //"": "Bilbao Centro",
+        "ARECHAVALETA": "Bilbao Centro",
         //"": "Bilbao Centro",
 
 
