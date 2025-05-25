@@ -323,7 +323,7 @@ const zonasEstandar = {
         "ERREKAKOETXE": "Bilbao Centro",
         "JARDINTXIKERRA": "Bilbao Centro",
         "ARECHAVALETA": "Bilbao Centro",
-        //"": "Bilbao Centro",
+        "PL ARRIQUIBAR": "Bilbao Centro",
 
 
 
