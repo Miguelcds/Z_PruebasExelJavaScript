@@ -324,6 +324,7 @@ const zonasEstandar = {
         "JARDINTXIKERRA": "Bilbao Centro",
         "ARECHAVALETA": "Bilbao Centro",
         "PL ARRIQUIBAR": "Bilbao Centro",
+        "AV REYES CATOLICOS": "Bilbao Centro",
 
 
 
