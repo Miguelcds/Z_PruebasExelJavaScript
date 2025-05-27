@@ -324,6 +324,13 @@ const zonasEstandar = {
         "ARECHAVALETA": "Bilbao Centro",
         "PL ARRIQUIBAR": "Bilbao Centro",
         "AV REYES CATOLICOS": "Bilbao Centro",
+        "PL AITA DONOSTIA":"Bilbao Centro",
+        //"":"Bilbao Centro",
+        //"":"Bilbao Centro",
+        //"":"Bilbao Centro",
+        //"":"Bilbao Centro",
+
+
 
 
 
@@ -679,7 +686,11 @@ const zonasEstandar = {
         "CA ARBOLANTXA BIDEA":"Txurdinaga - Alto",
         "LOZOÑO":"Txurdinga",
         "AV TXOMIN GARAT": "Txurdinaga",
+        "LARRATUNDU":"Txurdinga",
+        "IRUMINETA":"Txurdinga",
         //"":"Txurdinga",
+        //"":"Txurdinga",
+        //"":"Txurdinga",    
 };
 
 // Variables globales
