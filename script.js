@@ -82,7 +82,6 @@ const zonasEstandar = {
 
         "ANDALUCIA": "San Ignacio",
         "ARTURO CAMPION": "San Ignacio",
-        "AV TXOMIN GARAT": "San Ignacio",
         "AV ZUMALAKARREGI": "San Ignacio",
         "BENIDORM": "San Ignacio",
         "ELORRIETA": "San Ignacio",
@@ -679,6 +678,7 @@ const zonasEstandar = {
         "ZUHATZU":"Txurdinaga",
         "CA ARBOLANTXA BIDEA":"Txurdinaga - Alto",
         "LOZOÑO":"Txurdinga",
+        "AV TXOMIN GARAT": "Txurdinaga",
         //"":"Txurdinga",
 };
 
