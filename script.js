@@ -185,7 +185,7 @@ const zonasEstandar = {
         "ZURBARAN":"Matiko Alto",
         "MONTE ALDAMIZ":"Matiko Alto",
         "GR NUEVA AURORA":"Matiko Alto",
-        //"":"Matiko Alto",
+        "PL MUSICO GURIDI":"Matiko Alto",
 
         //  BILBAO CENTRO
 
@@ -601,7 +601,7 @@ const zonasEstandar = {
         "ZORROTZAGANA":"Zorroza",
         "BA SAN MIGUEL":"Zorroza",
         "GR ZAZPILANDA":"Zorroza",
-        //"": "Zorroza",
+        "BARINAGA": "Zorroza",
         //"": "Zorroza",
 
         // ZURBARANBARRI
