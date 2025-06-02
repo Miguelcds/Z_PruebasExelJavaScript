@@ -602,6 +602,8 @@ const zonasEstandar = {
         "BA SAN MIGUEL":"Zorroza",
         "GR ZAZPILANDA":"Zorroza",
         "BARINAGA": "Zorroza",
+        "BUTRON":"Zorroza",
+        "CADAGUA":"Zorroza",
         //"": "Zorroza",
 
         // ZURBARANBARRI
