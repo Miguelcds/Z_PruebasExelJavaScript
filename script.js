@@ -161,7 +161,7 @@ const zonasEstandar = {
         "CALIXTO LEGUINA": "Matiko",
         "PINTOR EDUARDO ZAMAC":"Matiko",
         "MONTE OIZ":"Matiko",
-        //"":"Matiko",
+        "EPALZA":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
@@ -345,7 +345,7 @@ const zonasEstandar = {
         "ES ENTRAMBASAGUAS ":"Bilbao-Basurtu",
         "PL BASURTUGORTA":"Bilbao-Basurtu",
         "AV MONTEVIDEO-BASURT":"Bilbao-Basurtu",
-        //"":"Bilbao-Basurtu",
+        "CA KOBETA BIDEA":"Bilbao-Basurtu",
         //"":"Bilbao-Basurtu",
         //"":"Bilbao-Basurtu",
 
@@ -661,6 +661,7 @@ const zonasEstandar = {
         "TR ALTUBE":"Rekalde",
         "GR ARTAZUBEKOA":"Rekalde",
         "BIZKARGI": "Rekalde",
+        "GOYA":"Rekalde",
 
         // TXURDINAGA:
 
