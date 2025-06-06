@@ -62,6 +62,7 @@ const zonasEstandar = {
         "RAMAL OLABEAGA": "Deusto Muelle",
         "RI ZORROTZAURRE": "Deusto Muelle",
         "CARGUERAS": "Deusto Muelle",
+        "SAGARDUI": "Deusto Muelle",
         
         // DEUSTO MONTE:
 
@@ -186,6 +187,7 @@ const zonasEstandar = {
         "MONTE ALDAMIZ":"Matiko Alto",
         "GR NUEVA AURORA":"Matiko Alto",
         "PL MUSICO GURIDI":"Matiko Alto",
+        "DOCTOR ALBERCA":"Matiko Alto",
 
         //  BILBAO CENTRO
 
