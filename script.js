@@ -163,6 +163,7 @@ const zonasEstandar = {
         "PINTOR EDUARDO ZAMAC":"Matiko",
         "MONTE OIZ":"Matiko",
         "EPALZA":"Matiko",
+        "ALMIRANTES OQUENDO":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
@@ -327,6 +328,7 @@ const zonasEstandar = {
         "PL ARRIQUIBAR": "Bilbao Centro",
         "AV REYES CATOLICOS": "Bilbao Centro",
         "PL AITA DONOSTIA":"Bilbao Centro",
+        "SAN VICENTE":"Bilbao Centro",
         //"":"Bilbao Centro",
         //"":"Bilbao Centro",
         //"":"Bilbao Centro",
@@ -408,6 +410,7 @@ const zonasEstandar = {
         "BANCO ESPAÑA":"Kasko Viejo",
         "SOMBRERERIA":"Kasko Viejo",
         "LOTERIA":"Kasko Viejo",
+        "PELOTA":"Kasko Viejo",
         //"":"Kasko Viejo",
      
      
