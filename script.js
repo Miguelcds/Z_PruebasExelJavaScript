@@ -52,7 +52,7 @@ const zonasEstandar = {
         "SANCHO DE AZPEITIA":"Deusto",
         "TR RAMON Y CAJAL":"Deusto",
         "PL ELISEO MIGOYA":"Deusto",
-        //"":"Deusto",
+        "SANTANDER":"Deusto",
         //"":"Deusto",
     
     
@@ -329,7 +329,7 @@ const zonasEstandar = {
         "AV REYES CATOLICOS": "Bilbao Centro",
         "PL AITA DONOSTIA":"Bilbao Centro",
         "SAN VICENTE":"Bilbao Centro",
-        //"":"Bilbao Centro",
+        "PL MUSEO":"Bilbao Centro",
         //"":"Bilbao Centro",
         //"":"Bilbao Centro",
         //"":"Bilbao Centro",
@@ -360,6 +360,7 @@ const zonasEstandar = {
         "SAN NICOLAS DE OLABE":"Bilbao Muelle",
         "URGOZO":"Bilbao Muelle",
         "RA OLABEAGA":"Bilbao Muelle",
+        "MU OLABEAGA":"Bilbao Muelle",
         
         // KASKO VIEJO
 
