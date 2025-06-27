@@ -164,7 +164,7 @@ const zonasEstandar = {
         "MONTE OIZ":"Matiko",
         "EPALZA":"Matiko",
         "ALMIRANTES OQUENDO":"Matiko",
-        //"":"Matiko",
+        "ARALAR":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
