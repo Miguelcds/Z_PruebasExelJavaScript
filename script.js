@@ -165,7 +165,7 @@ const zonasEstandar = {
         "EPALZA":"Matiko",
         "ALMIRANTES OQUENDO":"Matiko",
         "ARALAR":"Matiko",
-        //"":"Matiko",
+        "QUINTANA":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
         //"":"Matiko",
@@ -412,6 +412,8 @@ const zonasEstandar = {
         "SOMBRERERIA":"Kasko Viejo",
         "LOTERIA":"Kasko Viejo",
         "PELOTA":"Kasko Viejo",
+        "VICTOR":"Kasko Viejo",
+        //"":"Kasko Viejo",
         //"":"Kasko Viejo",
      
      
