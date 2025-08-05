@@ -330,7 +330,7 @@ const zonasEstandar = {
         "PL AITA DONOSTIA":"Bilbao Centro",
         "SAN VICENTE":"Bilbao Centro",
         "PL MUSEO":"Bilbao Centro",
-        //"":"Bilbao Centro",
+        "ZUGASTINOBIA":"Bilbao Centro",
         //"":"Bilbao Centro",
         //"":"Bilbao Centro",
 
@@ -413,7 +413,7 @@ const zonasEstandar = {
         "LOTERIA":"Kasko Viejo",
         "PELOTA":"Kasko Viejo",
         "VICTOR":"Kasko Viejo",
-        //"":"Kasko Viejo",
+        "TR DIECISEIS DE AGOS":"Kasko Viejo",
         //"":"Kasko Viejo",
      
      
