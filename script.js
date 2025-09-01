@@ -74,7 +74,7 @@ const zonasEstandar = {
         "MONTE GANETA": "Deusto Monte",
         "MONTE JATA": "Deusto Monte",
         "ARANEKO": "Deusto Monte",
-        //"": "Deusto Monte",
+        "MONTE ELORRIAGA": "Deusto Monte",
         //"": "Deusto Monte",
 
 
@@ -166,8 +166,8 @@ const zonasEstandar = {
         "ALMIRANTES OQUENDO":"Matiko",
         "ARALAR":"Matiko",
         "QUINTANA":"Matiko",
-        //"":"Matiko",
-        //"":"Matiko",
+        "GR LA POPULAR":"Matiko",
+        "ESNARRITZAGA":"Matiko",
         //"":"Matiko",
 
 
