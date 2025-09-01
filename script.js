@@ -53,7 +53,7 @@ const zonasEstandar = {
         "TR RAMON Y CAJAL":"Deusto",
         "PL ELISEO MIGOYA":"Deusto",
         "SANTANDER":"Deusto",
-        //"":"Deusto",
+        "GIPUZKOA":"Deusto",
     
     
         // RI DEUSTO:
@@ -414,7 +414,7 @@ const zonasEstandar = {
         "PELOTA":"Kasko Viejo",
         "VICTOR":"Kasko Viejo",
         "TR DIECISEIS DE AGOS":"Kasko Viejo",
-        //"":"Kasko Viejo",
+        "CA MALLONA":"Kasko Viejo",
      
      
     
@@ -502,6 +502,7 @@ const zonasEstandar = {
         "PL ALMERIA":"Santutxu",
         "MAESTRO ICIAR": "Santutxu",
         "PL FEDERICO ECHEVARR": "Santutxu",
+        "BEGOÑAZPI": "Santutxu",
 
 
         // SANTUTXU ALTO:
@@ -544,7 +545,7 @@ const zonasEstandar = {
         "DOS DE MAYO":"San Francisco",
         "MARTZANA":"San Francisco",
         "CANTALOJAS": "San Francisco",
-        //"": "SanFra",
+        "PL DOCTOR FLEMING": "SanFra",
 
         //MIRIBILLA
 
@@ -569,9 +570,9 @@ const zonasEstandar = {
         "SANTIAGO DE COMPOSTE":"Miribilla",
         "TENOR CONSTANTINO":"Miribilla",
         "MINA JULIA":"Miribilla",
-        "SAN ADRIAN": "Miribilla",
+        "SAN ADRIAN":"Miribilla",
         "MONTE SAIBIGAIN":"Miribilla",
-        //"": "Miribilla",
+        "MONTE INTXORTA":"Miribilla",
 
         // ZAMAKOLA
 
@@ -669,7 +670,7 @@ const zonasEstandar = {
         "TR ALTUBE":"Rekalde",
         "GR ARTAZUBEKOA":"Rekalde",
         "BIZKARGI": "Rekalde",
-        "GOYA":"Rekalde",
+        "DOCTOR DIAZ EMPARANZ":"Rekalde",
 
         // TXURDINAGA:
 
