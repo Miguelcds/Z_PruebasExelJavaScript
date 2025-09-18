@@ -54,8 +54,10 @@ const zonasEstandar = {
         "PL ELISEO MIGOYA":"Deusto",
         "SANTANDER":"Deusto",
         "GIPUZKOA":"Deusto",
-    
-    
+        "ARABA":"Deusto",
+        "CA UGASKO BIDEA":"Deusto",
+
+
         // RI DEUSTO:
 
         "RI DEUSTU": "Deusto Muelle",
@@ -63,6 +65,7 @@ const zonasEstandar = {
         "RI ZORROTZAURRE": "Deusto Muelle",
         "CARGUERAS": "Deusto Muelle",
         "SAGARDUI": "Deusto Muelle",
+        "BILBAO IZAURIETA": "Deusto Muelle",
         
         // DEUSTO MONTE:
 
@@ -168,7 +171,7 @@ const zonasEstandar = {
         "QUINTANA":"Matiko",
         "GR LA POPULAR":"Matiko",
         "ESNARRITZAGA":"Matiko",
-        //"":"Matiko",
+        "GR LA POPULAR":"Matiko",
 
 
         // MATIKO ALTO
@@ -331,7 +334,7 @@ const zonasEstandar = {
         "SAN VICENTE":"Bilbao Centro",
         "PL MUSEO":"Bilbao Centro",
         "ZUGASTINOBIA":"Bilbao Centro",
-        //"":"Bilbao Centro",
+        "DOCTOR ACHUCARRO":"Bilbao Centro",
         //"":"Bilbao Centro",
 
 
@@ -415,6 +418,8 @@ const zonasEstandar = {
         "VICTOR":"Kasko Viejo",
         "TR DIECISEIS DE AGOS":"Kasko Viejo",
         "CA MALLONA":"Kasko Viejo",
+        "TR ESCUELAS":"Kasko Viejo",
+
      
      
     
@@ -583,7 +588,7 @@ const zonasEstandar = {
         "CAMPA IBAIZABAL":"Zamakola",
         "IBAIALDE":"Zamakola",
         "CA IBAIZABAL":"Zamakola",
-        //"":"Zamakola",
+        "MALMASIN":"Zamakola",
         //"":"Zamakola",
 
         // ZORROZA
@@ -671,6 +676,8 @@ const zonasEstandar = {
         "GR ARTAZUBEKOA":"Rekalde",
         "BIZKARGI": "Rekalde",
         "DOCTOR DIAZ EMPARANZ":"Rekalde",
+        "GOYA":"Rekalde",
+
 
         // TXURDINAGA:
 
@@ -702,7 +709,16 @@ const zonasEstandar = {
         "IRUMINETA":"Txurdinga",
         //"":"Txurdinga",
         //"":"Txurdinga",
-        //"":"Txurdinga",    
+        //"":"Txurdinga", 
+        
+        
+
+        // DISEMINADO O MONTES
+
+        "ES BIZKORTA":"Lejos, Cerca de la Zona de Altamira",
+        
+
+
 };
 
 // Variables globales
@@ -786,7 +802,7 @@ downloadBtn.addEventListener('click', () => {
         XLSX.utils.book_append_sheet(newWorkbook, newWorksheet, "Calles con Zonas");
         
         // Descargar el archivo
-        XLSX.writeFile(newWorkbook, "calles_con_zonas.xlsx");
+        XLSX.writeFile(newWorkbook, "Calles_Asignadas.xlsx");
         
         resultsDiv.innerHTML += `<p style="color: green;">Archivo descargado con éxito!</p>`;
     } catch (error) {
