@@ -122,6 +122,7 @@ const zonasEstandar = {
         "DOCTOR GUIMON REZOLA":"San Ignacio",
         "ERRONKARI":"San Ignacio",
         "JUAN DE URBIETA": "San Ignacio",
+        "TUDELA":"San Ignacio",
         //"":"San Ignacio",
          
               
@@ -172,6 +173,7 @@ const zonasEstandar = {
         "GR LA POPULAR":"Matiko",
         "ESNARRITZAGA":"Matiko",
         "GR LA POPULAR":"Matiko",
+        "GR CIUDAD JARDIN":"Matiko",
 
 
         // MATIKO ALTO
@@ -187,7 +189,7 @@ const zonasEstandar = {
         "SANTURTZI":"Matiko Alto",
         "TR CIUDAD JARDIN":"Matiko Alto",
         "ZUMAIA":"Matiko Alto",
-        "ZURBARAN":"Matiko Alto",
+        "ZURBARAN":"Matiko Alto, lees este?",
         "MONTE ALDAMIZ":"Matiko Alto",
         "GR NUEVA AURORA":"Matiko Alto",
         "PL MUSICO GURIDI":"Matiko Alto",
@@ -335,11 +337,9 @@ const zonasEstandar = {
         "PL MUSEO":"Bilbao Centro",
         "ZUGASTINOBIA":"Bilbao Centro",
         "DOCTOR ACHUCARRO":"Bilbao Centro",
+        "VISTA ALEGRE":"Bilbao Centro",
+        //"":"Bilbao Centro"
         //"":"Bilbao Centro",
-
-
-
-
 
         // BILBAO-BASURTU
 
