@@ -66,6 +66,8 @@ const zonasEstandar = {
         "CARGUERAS": "Deusto Muelle",
         "SAGARDUI": "Deusto Muelle",
         "BILBAO IZAURIETA": "Deusto Muelle",
+        "PINTOR IGNACIO ZULOA": "Deusto Muelle",
+        "PL EUGENIO OLABARRIE": "Deusto Muelle",
         
         // DEUSTO MONTE:
 
@@ -338,7 +340,9 @@ const zonasEstandar = {
         "ZUGASTINOBIA":"Bilbao Centro",
         "DOCTOR ACHUCARRO":"Bilbao Centro",
         "VISTA ALEGRE":"Bilbao Centro",
-        //"":"Bilbao Centro"
+        "PRINCIPE" : "Bilbao Centro",
+        "VISTA ALEGRE":"Bilbao Centro"
+        "NICOLAS ALCORTA":"Bilbao Centro"
         //"":"Bilbao Centro",
 
         // BILBAO-BASURTU
@@ -551,6 +555,9 @@ const zonasEstandar = {
         "MARTZANA":"San Francisco",
         "CANTALOJAS": "San Francisco",
         "PL DOCTOR FLEMING": "SanFra",
+        "VITORIA-GASTEIZ": "SanFra",
+        "PARTICULAR DEL NORTE": "SanFra",
+            
 
         //MIRIBILLA
 
@@ -578,6 +585,8 @@ const zonasEstandar = {
         "SAN ADRIAN":"Miribilla",
         "MONTE SAIBIGAIN":"Miribilla",
         "MONTE INTXORTA":"Miribilla",
+        "MONTE GABIKA":"Miribilla",
+            
 
         // ZAMAKOLA
 
