@@ -341,8 +341,8 @@ const zonasEstandar = {
         "DOCTOR ACHUCARRO":"Bilbao Centro",
         "VISTA ALEGRE":"Bilbao Centro",
         "PRINCIPE" : "Bilbao Centro",
-        "VISTA ALEGRE":"Bilbao Centro"
-        "NICOLAS ALCORTA":"Bilbao Centro"
+        "VISTA ALEGRE":"Bilbao Centro",
+        "NICOLAS ALCORTA":"Bilbao Centro",
         //"":"Bilbao Centro",
 
         // BILBAO-BASURTU
